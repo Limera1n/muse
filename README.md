@@ -1,5 +1,5 @@
 <p align="center">
-  <img width="250" height="250" src="https://raw.githubusercontent.com/museofficial/muse/master/.github/logo.png">
+  <img width="250" height="250" src="https://raw.githubusercontent.com/Limera1n/muse/master/.github/logo.png">
 </p>
 
 Muse is a **highly-opinionated midwestern self-hosted** Discord music bot **that doesn't suck**. It's made for small to medium-sized Discord servers/guilds (think about a group the size of you, your friends, and your friend's friends).
@@ -35,7 +35,7 @@ A 64-bit OS is required to run Muse.
 
 The `master` branch acts as the developing / bleeding edge branch and is not guaranteed to be stable.
 
-When running a production instance, I recommend that you use the [latest release](https://github.com/museofficial/muse/releases/).
+When running a production instance, I recommend that you use the [latest release](https://github.com/Limera1n/muse/releases/).
 
 
 ### 🐳 Docker
@@ -61,7 +61,7 @@ You can also store your tokens in an environment file and make it available to y
 ```yaml
 services:
   muse:
-    image: ghcr.io/museofficial/muse:latest
+    image: ghcr.io/Limera1n/muse:latest
     restart: always
     volumes:
       - ./muse:/data
@@ -78,7 +78,7 @@ services:
 * Node.js (18.17.0 or later is required and latest 18.x.x LTS is recommended)
 * ffmpeg (4.1 or later)
 
-1. `git clone https://github.com/museofficial/muse.git && cd muse`
+1. `git clone https://github.com/Limera1n/muse.git && cd muse`
 2. Copy `.env.example` to `.env` and populate with values
 3. I recommend checking out a tagged release with `git checkout v[latest release]`
 4. `yarn install` (or `npm i`)
