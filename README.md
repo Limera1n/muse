@@ -38,40 +38,6 @@ The `master` branch acts as the developing / bleeding edge branch and is not gua
 When running a production instance, I recommend that you use the [latest release](https://github.com/Limera1n/muse/releases/).
 
 
-### 🐳 Docker
-
-There are a variety of image tags available:
-- `:2`: versions >= 2.0.0
-- `:2.1`: versions >= 2.1.0 and < 2.2.0
-- `:2.1.1`: an exact version specifier
-- `:latest`: whatever the latest version is
-
-(Replace empty config strings with correct values.)
-
-```bash
-docker run -it -v "$(pwd)/data":/data -e DISCORD_TOKEN='' -e SPOTIFY_CLIENT_ID='' -e SPOTIFY_CLIENT_SECRET='' -e YOUTUBE_API_KEY='' ghcr.io/Limera1n/muse:latest
-```
-
-This starts Muse and creates a data directory in your current directory.
-
-You can also store your tokens in an environment file and make it available to your container. By default, the container will look for a `/config` environment file. You can customize this path with the `ENV_FILE` environment variable to use with, for example, [docker secrets](https://docs.docker.com/engine/swarm/secrets/). 
-
-**Docker Compose**:
-
-```yaml
-services:
-  muse:
-    image: ghcr.io/Limera1n/muse:latest
-    restart: always
-    volumes:
-      - ./muse:/data
-    environment:
-      - DISCORD_TOKEN=
-      - YOUTUBE_API_KEY=
-      - SPOTIFY_CLIENT_ID=
-      - SPOTIFY_CLIENT_SECRET=
-```
-
 ### Node.js
 
 **Prerequisites**:
