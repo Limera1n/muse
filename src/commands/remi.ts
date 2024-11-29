@@ -1,5 +1,5 @@
-import { SlashCommandBuilder } from 'discord.js';
-import { Command } from '../types/Command'; // Adapte selon ton type Command
+import {SlashCommandBuilder} from '@discordjs/builders';
+import Command from './index.js';
 
 export const remi: Command = {
     data: new SlashCommandBuilder()
